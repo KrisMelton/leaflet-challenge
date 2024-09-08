@@ -1,20 +1,51 @@
+/* Global resets for consistent box-sizing and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure full-height for body and map container */
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
-  #map {
-    height: 100%;
-  }
-  
-  ul {
-    color: white;
-  }
-  
-  .legend {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
+  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f0f0; /* Light gray background for better contrast */
+}
+
+/* Full height map container */
+#map {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* White text color for all list items */
+ul {
+  color: #fff;
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 10px; /* Adds some padding to the left */
+}
+
+/* Legend styling */
+.legend {
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly darker for more contrast */
+  padding: 12px 15px; /* Increase padding for more space inside */
+  border-radius: 8px; /* Slightly larger border radius for a smoother look */
+  color: #fff; /* Ensure all text inside the legend is white */
+  font-size: 14px; /* Slightly smaller font size */
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a floating effect */
+}
+
+/* Add some spacing between legend list items */
+.legend ul {
+  margin-bottom: 5px;
+}
+
+.legend h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
